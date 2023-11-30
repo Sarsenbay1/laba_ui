@@ -4,11 +4,6 @@ void main() {
   runApp(const MyApp());
 }
 
-void pass() {
-  int count = 0;
-}
-
-
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
@@ -40,14 +35,106 @@ class MyApp extends StatelessWidget {
                 // crossAxisAlignment: CrossAxisAlignment.center,
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-
                     Image.asset("assets/images/woman.png", height: 170, width: 170,)
                   ]
               ),
+
+              const Padding(
+                padding: EdgeInsets.only(top: 35),
+                child: Text(
+                  'Екатерина',
+                  textAlign: TextAlign.center,
+                  style: TextStyle(
+                    color: Colors.black,
+                    fontSize: 24,
+                    fontFamily: 'SF Pro Display',
+                    fontWeight: FontWeight.w700,
+                    height: 0.06,
+                  ),
+                ),
+              ),
+
+              Padding(
+                  padding: EdgeInsets.only(top: 14),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: [
+                      Column(
+                        children: [
+                          Container(width: 187.50, height: 17),
+                          TextButton(
+                            onPressed: () {},
+                            child: const Text(
+                              'Профиль',
+                              textAlign: TextAlign.center,
+                              style: TextStyle(
+                                color: Colors.black,
+                                fontSize: 16,
+                                fontFamily: 'SF Pro Text',
+                                fontWeight: FontWeight.w500,
+                                height: 0.08,
+                                letterSpacing: -0.40,
+                              ),
+                            ),
+                          ),
+                          Container(width: 187.50, height: 5),
+                          Image.asset("assets/images/Active.png", height: 2, width: 187.5,)
+                        ],
+                      ),
+
+                      Column(
+                        children: [
+                          Container(width: 187.50, height: 17),
+                          TextButton(
+                            onPressed: () {},
+                            child: const Text(
+                              'Настройки',
+                              textAlign: TextAlign.center,
+                              style: TextStyle(
+                                color: Colors.black26,
+                                fontSize: 16,
+                                fontFamily: 'SF Pro Text',
+                                fontWeight: FontWeight.w500,
+                                height: 0.08,
+                                letterSpacing: -0.40,
+                              ),
+                            ),
+                          ),
+                          Container(width: 187.50, height: 7),
+                        ],
+                      )
+                    ],
+                  )
+
+              ),
+            const Padding(padding: EdgeInsets.only(top: 30,left: 16),
+            child: Row(mainAxisAlignment: MainAxisAlignment.start,
+                children: [
+                  Text('У вас подключено',
+                    style: TextStyle(
+                      color: Colors.black,
+                      fontSize: 20,
+                      fontFamily: 'SF Pro Text',
+                      fontWeight: FontWeight.w700,
+                      height: 0.06,
+                      letterSpacing: -0.70,
+                    ),)
+                ]
+            ),
+        ),
+
+
+
+
             ],
+
           ),
         ),
       ),
     );
   }
 }
+
+
+
+
